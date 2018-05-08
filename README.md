@@ -6,9 +6,10 @@ The Web Page is respnsive so will work perfectly fine on all devices and viewpor
 ### Prerequisites 
 Just the browser and (if required) an editor for editting the code.
 ## Built With
-* [HTML]
-* [CSS]
-* [BOOTSTRAP]
+* HTML
+* CSS
+* BOOTSTRAP
+* Editor Used - [Visual Studio Code](https://code.visualstudio.com/)
 ## Dependencies Used 
 * [BOOTSTRAP](https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css)
 * [POPPER.JS](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js)
