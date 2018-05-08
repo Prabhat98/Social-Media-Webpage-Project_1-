@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project_1</title>
+    <link rel="stylesheet" href="bootstrapsource.css">
+    <link rel = "stylesheet" href = "font-awesome-4.7.0/css/font-awesome.css">
+    <script src="jquery-3.3.1.slim.js"></script>
+    <script src="popper.js"></script>
+    <script src="bootstrap.js"></script>
+    <style>
+        body 
+        {
+            background-color: #333333;/*gray color*/
+            color:#fff;/* white text color */
+        }
+        .navbar 
+        {
+            border-bottom:#008ed6 solid 3px;/* blue color */
+            opacity:0.8; /* transparency */
+        }
+        #home-section 
+        {
+            background: url("adventure-backlit-community-207896.jpg") no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 700px;
+        }
+        .home-inner 
+        {
+            padding-top:150px;
+        }
+        .this-form 
+        {
+            opacity: 0.8;
+        }
+        #share-section
+        {
+            background: url("adventure-backlit-community-207896.jpg") no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 700px;            
+        }
+    </style>
+</head>
+<!-- 
+   NAVBAR
+    <nav> defines set of navigation links (for navigation bar)
+    navbar = navbar class creates a navigation bar
+    navbar-expand-sm = the breakpoint where we want it to go to responsive mode, 
+    stacks the navbar vertically when it hits sm size 
+    bg = adds background color to navbar
+    navbar-dark = adds white color to text elements in the navbar
+    navbar-light = adds black color to text in the navbar      
+    fixed-top = makes navbar fixed to the top of the screen (sticky)
+    navbar-brand = to highlight brand/logo/name of the page(header element to represent logo/header)
+    navbar-nav = used on ul that containes list items with links inside navigation bar
+    ( to add links inside navigation bar ), make the links inline and not the bullet points 
+    nav-item = each list item has this class
+    nav-link = styles item to look like a link
+    navbar-toggler = styles a button that should open navbar on small screens 
+    data-toggle ="collapsible" = to assign the control of collapsible element
+    data-target = accepts the id to which we want to apply the collapse to 
+    collapse = this class indicates collapsible content
+    navbar-collapse = collapses the navbar
+    justify-content-end = alligns items at the end of the container
+
+   HOME SECTION
+    display = display classes define the size of the texts in bootstrap
+    row = creates rows
+    col = this class creates columns in the rows 
+    d-flex = creates a flexbox container ( display:flex; )
+    flex-row = default ( aligns items in row, it is default ) 
+    <i> = is default while using fontawesome, <span> can also be used
+    p-4 = gives padding from all the sides unless side is specified
+    align-self-start = alignment of selected items inside the container ( start means in the
+    starting of container )
+    fa = represents font awesome 
+    fa-check-square-o = represents the check sign 
+    fa-2x = two times the size
+    card = a basic card is created using this class ( it is a bordered box with padding around
+    its content )
+    card-body = content inside card has this class ( gives a padded section within the card )
+    text-center = to align text to the center
+    form-group = container for form input and label ( adds spacing to form )
+    form-control = for input, textarea and select to make them block and responsive
+    ( rounded corners and borders to make it look much better )
+    form-control-lg = to make input size look bigger
+    btn = creates a basic button 
+    btn-outline-light = creates an outline button of light color
+    btn-block = displays button as block
+    d-none = remains hidden otherwise
+    d-lg-block = is displayed when screen size hits lg
+    background-size = defines the size of backgriund image
+    background-attachment = whether a background image will scroll with the rest of the page or
+    fixed
+    min-height = defines the minimum height of an element , if element smaller than minimum height
+    min-h will be applied , if larger than minimun height then it will not be applied
+   
+   Explore Section
+    lead = makes a pragraph stand out
+    py = padding on y-axis
+    text:muted = to make text lighter
+    img-fluid = creates responsive images
+    rounded-circle = shapes the image to circle
+
+   Create Section
+    rounded = adds rounded corners to the image
+    img-thumbnail = shapes the image to a thumbnail ( bordered )
+
+   Footer Section
+    data-toggle = "modal" = opens the modal window ( modal is dialog box/popup window displayed
+    on the top of the current page )
+    data-target = "#" = points to the id of modal
+
+   Modal Content
+    modal = identifies the content of <div> as modal and brings focus to it 
+    fade = adds a transition effect, which fades the modal in and out
+    modal-dialog = sets proper width and margin of the modal
+    modal-content = styles the modal ( border, bck-color etc ). Modal's header, body and footer 
+    comes under this div
+    modal-header = styles the header of modal
+    modal-title = styles the header with proper line-height
+    close = styles the close button
+    data-dismiss = "modal" = closes the modal when clicked on it
+    &times; = gives cross symbol else font awesome
+    &copy; = gives copyright symbol else font awesome
+    modal-body = styles the body of modal ( para, image, video etc )
+    <label> = defines label for an input element
+    <textarea> = defines multi line text input control ( can hold unlimited number of characters )
+    modal-footer = styles the footer of the modal
+    text-dark = makes the text color dark
+
+
+-->    
+
+<body> 
+    <!-- NAVIGATION BAR -->
+    <nav class = "navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand" href = "#">NavBar</a>
+            <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#collapsible" >
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+            <div class = "collapse navbar-collapse justify-content-end" id = "collapsible">
+                <ul class = "navbar-nav">
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "#home-section"><i class = "fa fa-home"></i> Home</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "#explore-head"><i class = "fa fa-search"></i> Explore</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "#create-head"><i class = "fa fa-plus"></i> Create</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "#share-head"><i class = "fa fa-share-alt"></i> Share</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>   
+
+    <!-- HOME SECTION -->
+    <div id = "home-section">
+        <div class = "home-inner">
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-lg-8 d-none d-lg-block">
+                        <div>
+                            <h1 class = "display-4">
+                                Social Media Platform And Other Activities. 
+                            </h1>
+                        </div>
+                        <div class = "d-flex flex-row">
+                            <div class = "p-4 align-self-start">
+                                <i class = "fa fa-check-square-o fa-2x fam"></i>
+                            </div>
+                            <div class = "p-4 align-self-end">
+                                Some Random Text And <br> Other Things .
+                            </div>
+                        </div>
+                        <div class = "d-flex flex-row">
+                            <div class = "p-4 align-self-start">
+                                <i class = "fa fa-check-square-o fa-2x fam"></i>
+                            </div>
+                            <div class = "p-4 align-self-end">
+                                Some Random Text And <br> Other Things .
+                            </div>
+                        </div>
+                        <div class = "d-flex flex-row">
+                            <div class = "p-4 align-self-start">
+                                <i class = "fa fa-check-square-o fa-2x fam"></i>
+                            </div>
+                            <div class = "p-4 align-self-end">
+                                Some Random Text And <br> Other Things .
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-lg-4">
+                        <div class = "card bg-primary text-center this-form">
+                            <div class = "card-body">
+                                <h3>
+                                    Sign Up Today!
+                                </h3>
+                                <p>
+                                    Please fill out this form to register
+                                </p>
+                                <form>
+                                    <div class = "form-group">
+                                        <input type = "text" class = "form-control form-control-md" placeholder = "Username">
+                                    </div>
+                                    <div class = "form-group">
+                                        <input type = "email" class = "form-control form-control-md" placeholder = "Email">
+                                    </div>
+                                    <div class = "form-group">
+                                        <input type = "password" class = "form-control form-control-md" placeholder = "Password">
+                                    </div>
+                                    <div class = "form-group">
+                                        <input type = "password" class = "form-control form-control-md" placeholder = "Confirm Password">
+                                    </div>                                                
+                                    <button type = "submit" class = "btn btn-outline-light btn-block">
+                                        Submit
+                                    </button>
+                                </form>
+                            </div>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </div>
+    <!-- EXPLORE SECCTION -->
+    <div id = "explore-head">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col text-center py-5">
+                    <h1 class = "display-4">
+                        Explore
+                        <i class = "fa fa-search-plus"></i>
+                    </h1>
+                    <p class = "lead">
+                        Let's just pretend that this is a really awesome paragraph.
+                    </p>
+                    <a href = "#" class = "btn btn-outline-secondary">Find Out More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "explore-section" class = "bg-light text-muted py-5">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-6">
+                    <img src = "blur-close-up-collage-196655.jpg" class = "img-fluid rounded-circle mb-3">
+                </div>
+                <div class = "col-md-6">
+                    <h3>
+                        Explore And Connect
+                    </h3>
+                    <p>Whether or not, told before or not, this doesn't matter because it ultimately
+                        leads to one single conclusion. This is perfectly balanced.
+                    </p>
+                    <div class = "d-flex flex-row">
+                        <div class = "p-4 align-self-start">
+                            <i class = "fa fa-check-square-o fa-2x"></i>
+                        </div>
+                        <div class = "p-4 align-self-end">
+                            Some Random Text And <br> Other Things .
+                        </div>
+                    </div>
+                    <div class = "d-flex flex-row">
+                        <div class = "p-4 align-self-start">
+                            <i class = "fa fa-check-square-o fa-2x"></i>
+                        </div>
+                        <div class = "p-4 align-self-end">
+                            Some Random Text And <br> Other Things .
+                        </div>
+                    </div>
+                    <div class = "d-flex flex-row">
+                        <div class = "p-4 align-self-start">
+                            <i class = "fa fa-check-square-o fa-2x"></i>
+                        </div>
+                        <div class = "p-4 align-self-end">
+                            Some Random Text And <br> Other Things .
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- CREATE SECTION -->
+    <div id = "create-head" class = "bg-secondary">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col text-center py-5">
+                    <h1 class = "display-4">
+                        Create
+                        <i class = "fa fa-plus-square"></i>
+                    </h1>
+                    <p class = "lead">
+                        Some more overloaded awesomeness in this paragraph. 
+                        This might look like a bigger appeal but it tends to bend around the corners.
+                    </p>
+                    <a href = "#" class = "btn btn-outline-light">Find Out More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "create-section" class = "py-5">
+        <div class = "container">
+            <div class = "row">                
+                <div class = "col-md-6">
+                    <h3>
+                        Create And Expand
+                    </h3>
+                    <p>Whether or not, told before or not, this doesn't matter because it ultimately
+                        leads to one single conclusion. This is perfectly balanced.
+                    </p>
+                    <div class = "d-flex flex-row">
+                        <div class = "p-4 align-self-start">
+                            <i class = "fa fa-check-square-o fa-2x"></i>
+                        </div>
+                        <div class = "p-4 align-self-end">
+                            Some Random Text And <br> Other Things .
+                        </div>
+                    </div>
+                    <div class = "d-flex flex-row">
+                        <div class = "p-4 align-self-start">
+                            <i class = "fa fa-check-square-o fa-2x"></i>
+                        </div>
+                        <div class = "p-4 align-self-end">
+                            Some Random Text And <br> Other Things .
+                        </div>
+                    </div>
+                    <div class = "d-flex flex-row">
+                        <div class = "p-4 align-self-start">
+                            <i class = "fa fa-check-square-o fa-2x"></i>
+                        </div>
+                        <div class = "p-4 align-self-end">
+                            Some Random Text And <br> Other Things .
+                        </div>
+                    </div>
+                </div>
+                <div class = "col-md-6">
+                    <img src = "arts-build-close-up-273230.jpg" class = "img-fluid rounded img-thumbnail mb-3">
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!-- SHARE SECTION -->
+    <div id = "share-head" class = "bg-primary">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col text-center py-5">
+                    <h1 class = "display-4">
+                        Share
+                        <i class = "fa fa-share-alt"></i>
+                    </h1>
+                    <p class = "lead">
+                        A paragraph is a series of sentences that are organized and coherent, 
+                        and are all related to a single topic. Almost every piece of writing 
+                        you do that is longer than a few sentences should be organized into paragraphs.
+                    </p>
+                    <a href = "#" class = "btn btn-outline-light">Find Out More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "share-section" class = "py-5">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-6">
+                    <img src = "black-and-white-black-and-white-connection-615479.jpg" class = "img-fluid rounded-circle img-thumbnail mb-3">
+                </div>
+                <div class = "col-md-6">
+                    <h3>
+                        Share What You Create
+                    </h3>
+                    <p>
+                        Gave read use way make spot how nor. In daughter goodness an 
+                        likewise oh consider at procured wandered. Songs words wrong by 
+                        me hills heard timed.
+                    </p>
+                    <div class = "d-flex flex-row">
+                        <div class = "p-4 align-self-start">
+                            <i class = "fa fa-check-square-o fa-2x"></i>
+                        </div>
+                        <div class = "p-4 align-self-end">
+                            Some Random Text And <br> Other Things .
+                        </div>
+                    </div>
+                    <div class = "d-flex flex-row">
+                        <div class = "p-4 align-self-start">
+                            <i class = "fa fa-check-square-o fa-2x"></i>
+                        </div>
+                        <div class = "p-4 align-self-end">
+                            Some Random Text And <br> Other Things .
+                        </div>
+                    </div>
+                    <div class = "d-flex flex-row">
+                        <div class = "p-4 align-self-start">
+                            <i class = "fa fa-check-square-o fa-2x"></i>
+                        </div>
+                        <div class = "p-4 align-self-end">
+                            Some Random Text And <br> Other Things .
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- FOOTER -->
+    <div id = "footer" class = "bg-dark">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col text-center">
+                    <div class = "py-4">
+                        <h3>Brand Name</h3>
+                        <p>Copyright <i class = "fa fa-copyright"></i> 2018</p>
+                        <button class = "btn btn-light" data-toggle = "modal" data-target = "#modal-content">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL CONTENT -->
+    <div class = "modal fade text-dark" id = "modal-content">   
+        <div class = "modal-dialog">
+            <div class = "modal-content">
+                <div class = "modal-header">
+                    <h5 class = "modal-title">Contact Us</h5>
+                    <button class = "close" data-dismiss = "modal">
+                        <i class = "fa fa-times"></i>
+                    </span>
+                    </button>
+                </div>
+                <div class = "modal-body">
+                    <form>
+                        <div class = "form-group">
+                            <label>Name</label>
+                            <input type = "text" class = "form-control">
+                        </div>
+                        <div class = "form-group">
+                            <label>Email</label>
+                            <input type = "text" class = "form-control">
+                        </div>
+                        <div class = "form-group">
+                            <label>Message</label>
+                            <textarea class = "form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class = "modal-footer">
+                    <button class = "btn btn-primary btn-block">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
