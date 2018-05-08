@@ -2,7 +2,7 @@
 This is a Web Page based on Social Media Platform Theme.
 ## Getting Started 
 Just Clone the entire repository to your local machine and run the "Project_1.html" file into your browser.
-The Web Page is respnsive so will work perfectly fine on all devices and viewports.
+The Web Page is entirely respnsive so will work perfectly fine on all devices and viewports.
 ### Prerequisites 
 Just the browser and (if required) an editor for editting the code.
 ## Built With
